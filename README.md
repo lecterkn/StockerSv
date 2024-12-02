@@ -18,3 +18,9 @@ npm i
 ```shell
 npm run dev
 ```
+
+## API生成
+
+```shell
+npx openapi-typescript-codegen --input ./swagger.json --output ./src/api
+```
