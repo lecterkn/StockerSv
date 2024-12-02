@@ -1,0 +1,9 @@
+{
+    "account": {
+        "title": "アカウント",
+        "register": "登録",
+        "login": "ログイン",
+        "name": "名前",
+        "password": "パスワード"
+    }
+}

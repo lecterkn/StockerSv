@@ -1,0 +1,9 @@
+{
+    "account": {
+        "title": "Account",
+        "register": "Register",
+        "login": "Login",
+        "name": "Name",
+        "password": "Password"
+    }
+}
