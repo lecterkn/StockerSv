@@ -4,6 +4,7 @@
 	import { authorization } from '$stores/user'
 	import { browser } from "$app/environment";
 	import '../app.css';
+	import { OpenAPI } from '$api';
 
 	// 言語設定
 	const defaultLanguage = "ja"
@@ -13,9 +14,12 @@
 
 	if (browser) {
 		authorization.subscribe((token) => {
-		console.log(token)
-		if (token === null) {
-			goto("/login", {replaceState: true})
+			console.log(token)
+			if (token === null) {
+				goto("/login", {replaceState: true})
+			} 
+			else {
+				OpenAPI.TOKEN = token
 			}
 		})
 	}

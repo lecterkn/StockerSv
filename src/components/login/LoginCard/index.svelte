@@ -6,13 +6,16 @@
 	import * as Card from '$lib/components/ui/card';
 	import { OpenAPI, UserService } from '$api';
 	import { goto } from '$app/navigation';
-	import { browser } from "$app/environment";
 	import { authorization } from '$stores/user';
 
 	let request = {
 		name: '',
 		password: ''
 	};
+
+	function resetFields() {
+		request.password = ''
+	}
 
 	function loginAccount() {
 		UserService.postLogin(request).then((response) => {
@@ -24,7 +27,9 @@
 			authorization.set(response.token)
 			console.log('authorized');
 			goto('/', { replaceState: true });
-		});
+		}).finally(() => {
+			resetFields()
+		})
 	}
 </script>
 

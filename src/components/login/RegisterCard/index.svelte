@@ -11,9 +11,16 @@
 		password: ''
 	}
 
+	function resetFields() {
+		request.name = ''
+		request.password = ''
+	}
+
 	function registerAccount() {
 		UserService.postRegister(request).then((response) => {
 			console.log(response.id)
+		}).finally(() => {
+			resetFields()
 		})
 	}
 </script>
