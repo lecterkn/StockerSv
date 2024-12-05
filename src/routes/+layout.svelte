@@ -14,7 +14,6 @@
 
 	if (browser) {
 		authorization.subscribe((token) => {
-			console.log(token)
 			if (token === null) {
 				goto("/login", {replaceState: true})
 			} 

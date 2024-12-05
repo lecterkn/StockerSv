@@ -7,14 +7,14 @@ const config = ({
       locale: 'en',
       key: 'common',
       loader: async () => (
-        await import('./locales/en.json')
+        await import('$common/locales/en.json')
       ).default,
     },
     {
       locale: 'ja',
       key: 'common',
       loader: async () => (
-        await import('./locales/ja.json')
+        await import('$common/locales/ja.json')
       ).default,
     },
   ],

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import LoginTabs from "$components/login/LoginTabs/index.svelte"
+    import LoginTabs from "$components/Login/LoginTabs/index.svelte"
 </script>
 
 <div class="flex h-screen w-screen">

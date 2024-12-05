@@ -1,0 +1,18 @@
+{
+    "account": {
+        "title": "Account",
+        "register": "Register",
+        "login": "Login",
+        "name": "Name",
+        "password": "Password"
+    },
+    "stores": {
+        "list": "Stores",
+        "new": "New Store",
+        "name": "Store name",
+        "create": "Create",
+        "sidebar": {
+            "list": "Applications"
+        }
+    }
+}

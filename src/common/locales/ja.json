@@ -1,0 +1,32 @@
+{
+    "account": {
+        "title": "アカウント",
+        "register": "登録",
+        "login": "ログイン",
+        "name": "名前",
+        "password": "パスワード"
+    },
+    "stores": {
+        "list": "店舗一覧",
+        "new": "新規作成",
+        "name": "店舗名",
+        "create": "作成",
+        "sidebar": {
+            "list": "機能一覧",
+            "logout": "ログアウト"
+        },
+        "stockOut": {
+            "name": "販売管理"
+        },
+        "stockIn": {
+            "name": "入荷管理"
+        },
+        "refunds": {
+            "name": "返金管理"
+        }
+    },
+    "scanner": {
+        "start": "読み取り開始",
+        "stop": "読み取り停止"
+    }
+}
