@@ -3,11 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_ItemResponse = {
-    createdAt?: string;
-    id?: string;
-    janCode?: string;
-    name?: string;
-    storeId?: string;
-    updatedAt?: string;
+    createdAt: string;
+    id: string;
+    janCode: string;
+    name: string;
+    storeId: string;
+    updatedAt: string;
 };
 

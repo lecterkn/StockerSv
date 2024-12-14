@@ -19,7 +19,9 @@ const config = {
 			"$api": "src/api",
 			"$api/*": "src/api",
 			"$stores": "src/stores",
-			"$stores/*": "src/stores"
+			"$stores/*": "src/stores",
+			"$common": "src/common",
+			"$common/*": "src/common"
 		}
 	}
 };

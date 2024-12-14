@@ -3,12 +3,14 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_ItemStockResponse = {
-    createdAt?: string;
-    itemId?: string;
-    place?: string;
-    stock?: number;
-    stockMin?: number;
-    storeId?: string;
-    updatedAt?: string;
+    createdAt: string;
+    itemId: string;
+    janCode: string;
+    name: string;
+    price?: number;
+    stock: number;
+    stockMin: number;
+    storeId: string;
+    updatedAt: string;
 };
 

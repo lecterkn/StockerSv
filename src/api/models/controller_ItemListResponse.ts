@@ -4,6 +4,6 @@
 /* eslint-disable */
 import type { controller_ItemResponse } from './controller_ItemResponse';
 export type controller_ItemListResponse = {
-    list?: Array<controller_ItemResponse>;
+    list: Array<controller_ItemResponse>;
 };
 

@@ -3,6 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_UserLoginResponse = {
-    token?: string;
+    token: string;
 };
 
