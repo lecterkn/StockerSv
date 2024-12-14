@@ -3,8 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_ItemStockRequest = {
-    place?: string;
-    stock?: number;
+    janCode: string;
+    name: string;
+    price?: number;
+    stock: number;
     stockMin?: number;
 };
 

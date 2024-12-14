@@ -1,32 +1,73 @@
 {
-    "account": {
-        "title": "アカウント",
-        "register": "登録",
-        "login": "ログイン",
-        "name": "名前",
-        "password": "パスワード"
+  "account": {
+    "title": "アカウント",
+    "register": "登録",
+    "login": "ログイン",
+    "name": "名前",
+    "password": "パスワード"
+  },
+  "stores": {
+    "list": "店舗一覧",
+    "new": "新規作成",
+    "name": "店舗名",
+    "create": "作成",
+    "sidebar": {
+      "list": "機能一覧",
+      "logout": "ログアウト"
     },
-    "stores": {
-        "list": "店舗一覧",
-        "new": "新規作成",
-        "name": "店舗名",
-        "create": "作成",
-        "sidebar": {
-            "list": "機能一覧",
-            "logout": "ログアウト"
-        },
-        "stockOut": {
-            "name": "販売管理"
-        },
-        "stockIn": {
-            "name": "入荷管理"
-        },
-        "refunds": {
-            "name": "返金管理"
-        }
+    "stockOut": {
+      "name": "販売管理"
     },
-    "scanner": {
-        "start": "読み取り開始",
-        "stop": "読み取り停止"
+    "stockIn": {
+      "name": "入荷管理"
+    },
+    "stocks": {
+      "name": "在庫管理"
+    },
+    "refunds": {
+      "name": "返金管理"
     }
+  },
+  "scanner": {
+    "start": "読み取り開始",
+    "stop": "読み取り停止"
+  },
+  "stockIns": {
+    "form": {
+      "title": "入荷",
+      "description": "入荷情報を入力してください",
+      "name": "商品名",
+      "janCode": "JANコード",
+      "place": "場所",
+      "price": "金額",
+      "stocks": "商品数",
+      "send": "登録"
+    },
+    "list": {
+      "name": "商品名",
+      "price": "金額",
+      "place": "場所",
+      "stocks": "商品数",
+      "stockInAt": "入荷日時",
+      "refresh": "更新"
+    }
+  },
+  "stocks": {
+    "list": {
+      "name": "商品名",
+      "janCode": "JANコード",
+      "price": "単価",
+      "stocks": "在庫数",
+      "place": "場所",
+      "stockMin": "必要在庫数",
+      "updatedAt": "更新日時",
+      "refresh": "更新",
+      "null": "未設定"
+    },
+    "edit": {
+      "title": "商品情報を編集",
+      "cancel": "キャンセル",
+      "save": "保存"
+    }
+  }
 }

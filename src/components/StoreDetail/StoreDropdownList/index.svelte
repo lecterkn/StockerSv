@@ -6,12 +6,19 @@
     import * as Sidebar from "$lib/components/ui/sidebar/";
     import ChevronDown from 'lucide-svelte/icons/chevron-down'
 
-    export let storeName;
+    export let storeId;
 
     let stores = get(storeList)
     storeList.subscribe((list) => {
         stores = list
     })
+
+    const getStoreName = () => {
+        if (storeId === null) {
+            return ""
+        }
+        return stores.find((it) => it.id === storeId)?.name
+    }
 
     function gotoStore(storeId: string | undefined) {
         goto("/stores/" + storeId, {replaceState: true})
@@ -23,7 +30,7 @@
         {#snippet child({ props})}
             <Sidebar.MenuButton {...props}>
                 <span class="text-2xl font-medium">
-                    {storeName}
+                    {getStoreName()}
                 </span>
                 <ChevronDown></ChevronDown>
             </Sidebar.MenuButton>

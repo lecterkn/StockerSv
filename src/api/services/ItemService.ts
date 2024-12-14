@@ -12,11 +12,15 @@ export class ItemService {
     /**
      * 商品一覧取得
      * @param storeId 店舗ID
+     * @param name 商品名
+     * @param janCode Janコード
      * @returns any OK
      * @throws ApiError
      */
     public static getStoresItems(
         storeId: string,
+        name?: string,
+        janCode?: string,
     ): CancelablePromise<(controller_ItemListResponse & {
         list?: Array<controller_ItemResponse>;
     })> {
@@ -25,6 +29,10 @@ export class ItemService {
             url: '/stores/{storeId}/items',
             path: {
                 'storeId': storeId,
+            },
+            query: {
+                'name': name,
+                'janCode': janCode,
             },
         });
     }

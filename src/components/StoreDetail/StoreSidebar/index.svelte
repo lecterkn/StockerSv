@@ -2,37 +2,34 @@
 	import { t } from '$lib/i18n/';
     import * as Sidebar from "$lib/components/ui/sidebar/index.js";
     import StoreDropdownList from "$components/StoreDetail/StoreDropdownList/index.svelte"
-	import { storeList } from "$stores/stores";
-	import { get } from "svelte/store";
     import ShoppingCart from 'lucide-svelte/icons/shopping-cart'
     import ArchiveRestore from 'lucide-svelte/icons/archive-restore'
+    import Archive from 'lucide-svelte/icons/archive'
     import Undo from 'lucide-svelte/icons/undo-2'
     import Logout from 'lucide-svelte/icons/log-out'
 
     export let storeId;
 
-    let getStoreName = () => {
-        if (storeId === null) {
-            return ""
-        }
-        let name = get(storeList).find((it) => it.id === storeId)?.name
-        return name
-    }
 
     let getApplicationContents = () => {
         return [
             {
-                "name": $t("common.stores.stockOut.name"),
+                "name": "common.stores.stockOut.name",
                 "icon": ShoppingCart,
                 "link": "/stores/" + storeId + "/stockOut"
             },
             {
-                "name": $t("common.stores.stockIn.name"),
+                "name": "common.stores.stockIn.name",
                 "icon": ArchiveRestore,
                 "link": "/stores/" + storeId + "/stockIn"
             },
             {
-                "name": $t("common.stores.refunds.name"),
+                "name": "common.stores.stocks.name",
+                "icon": Archive,
+                "link": "/stores/" + storeId + "/stocks"
+            },
+            {
+                "name": "common.stores.refunds.name",
                 "icon": Undo,
                 "link": "/stores/" + storeId + "/refunds"
             },
@@ -44,7 +41,7 @@
     <Sidebar.Root side="left" variant="sidebar">
         <Sidebar.Header>
             <Sidebar.MenuItem>
-                <StoreDropdownList storeName={getStoreName()}></StoreDropdownList>
+                <StoreDropdownList storeId={storeId}></StoreDropdownList>
             </Sidebar.MenuItem>
         </Sidebar.Header>
         <Sidebar.Content>
@@ -62,7 +59,7 @@
                                     {#snippet child({ props })}
                                         <a href={item.link} {...props}>
                                             <item.icon />
-                                            <span class="text-xl font-light">{item.name}</span>
+                                            <span class="text-lg font-light">{$t(item.name)}</span>
                                         </a>
                                     {/snippet}
                                 </Sidebar.MenuButton>

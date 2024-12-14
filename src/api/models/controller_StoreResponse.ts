@@ -3,10 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_StoreResponse = {
-    createdAt?: string;
-    id?: string;
-    name?: string;
-    updatedAt?: string;
-    userId?: string;
+    createdAt: string;
+    id: string;
+    name: string;
+    updatedAt: string;
+    userId: string;
 };
 

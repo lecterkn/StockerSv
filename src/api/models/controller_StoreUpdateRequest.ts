@@ -3,6 +3,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_StoreUpdateRequest = {
-    name?: string;
+    name: string;
 };
 

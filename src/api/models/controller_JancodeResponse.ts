@@ -3,8 +3,8 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_JancodeResponse = {
-    brandName?: string;
-    makerName?: string;
-    name?: string;
+    brandName: string;
+    makerName: string;
+    name: string;
 };
 

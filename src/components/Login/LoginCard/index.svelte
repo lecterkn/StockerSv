@@ -19,13 +19,8 @@
 
 	function loginAccount() {
 		UserService.postLogin(request).then((response) => {
-			if (response.token === undefined) {
-				console.log('unauthorized');
-				return;
-			}
 			OpenAPI.TOKEN = response.token;
 			authorization.set(response.token)
-			console.log('authorized');
 			goto('/', { replaceState: true });
 		}).finally(() => {
 			resetFields()

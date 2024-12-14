@@ -4,6 +4,6 @@
 /* eslint-disable */
 import type { controller_StoreResponse } from './controller_StoreResponse';
 export type controller_StoreListResponse = {
-    list?: Array<controller_StoreResponse>;
+    list: Array<controller_StoreResponse>;
 };
 

@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_UserRequest = {
-    name?: string;
-    password?: string;
+    name: string;
+    password: string;
 };
 

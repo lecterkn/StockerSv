@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 export type controller_UserResponse = {
-    createdAt?: string;
-    id?: string;
-    name?: string;
-    updatedAt?: string;
+    createdAt: string;
+    id: string;
+    name: string;
+    updatedAt: string;
 };
 

@@ -13,11 +13,13 @@
  
     function onScanSuccess(decodedText: string, decodedResult: Html5QrcodeResult): void {
         console.log("decodedText: ", decodedText)
-        stopScan()
         onDetected(decodedText)
+        if (scanner?.getState() === Html5QrcodeScannerState.SCANNING) {
+            scanner?.pause()
+            isScanning = false
+        }
     }
 
-    // usually better to ignore and keep scanning
     function onScanFailure(message: string) {
         console.log("decodedError: ", message)
     }
@@ -25,15 +27,13 @@
     let scanner: Html5QrcodeScanner;
     let isScanning = false
 
-    let width = 250
-    let height = 250
+    let width = 400
+    let height = 200
 
-    async function startScan() {
-        if (scanner?.getState() === Html5QrcodeScannerState.PAUSED) {
-            scanner?.resume()
-            return
-        }
-        if (isScanning) {
+    async function toggleScan() {
+        if (scanner?.getState() === Html5QrcodeScannerState.SCANNING) {
+            scanner.pause()
+            isScanning = false
             return
         }
         isScanning = true 
@@ -59,25 +59,13 @@
         );
         scanner.render(onScanSuccess, onScanFailure);
     }
-
-    function stopScan() {
-        isScanning = false;
-        if (scanner?.getState() === Html5QrcodeScannerState.SCANNING) {
-            scanner?.pause();
-        }
-    }
 </script>
 
-<div>
-    <div id="qr-scanner"></div>
-    <button on:click={startScan}>
-        <Button disabled={isScanning}>
-            {$t("common.scanner.start")}
+<div class="my-2">
+    <button on:click={toggleScan}>
+        <Button variant={isScanning ? "destructive" : "default"}>
+            {isScanning ? $t("common.scanner.stop") : $t("common.scanner.start")}
         </Button>
     </button>
-    <button on:click={stopScan}>
-        <Button disabled={!isScanning}>
-            {$t("common.scanner.stop")}
-        </Button>
-    </button>
+    <div id="qr-scanner" class="my-2 w-[500px]"></div>
 </div>
