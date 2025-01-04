@@ -2,14 +2,13 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type controller_ItemStockResponse = {
+export type controller_StockOutResponse = {
     createdAt: string;
+    id: string;
     itemId: string;
-    janCode: string;
     name: string;
     price: number;
-    stock: number;
-    stockMin: number;
+    stocks: number;
     storeId: string;
     updatedAt: string;
 };
