@@ -50,6 +50,26 @@ export class ItemStockService {
         });
     }
     /**
+     * Jancodeから商品詳細取得
+     * @param storeId 店舗ID
+     * @param jancode JANコード
+     * @returns controller_ItemStockResponse OK
+     * @throws ApiError
+     */
+    public static getStoresItemStocksJancodes(
+        storeId: string,
+        jancode: string,
+    ): CancelablePromise<controller_ItemStockResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/stores/{storeId}/itemStocks/jancodes/{jancode}',
+            path: {
+                'storeId': storeId,
+                'jancode': jancode,
+            },
+        });
+    }
+    /**
      * 商品詳細取得
      * @param storeId 店舗ID
      * @param itemId 商品ID

@@ -18,6 +18,9 @@ export type { controller_JancodeResponse } from './models/controller_JancodeResp
 export type { controller_StockInCreateRequest } from './models/controller_StockInCreateRequest';
 export type { controller_StockInListResponse } from './models/controller_StockInListResponse';
 export type { controller_StockInResponse } from './models/controller_StockInResponse';
+export type { controller_StockOutCreateRequest } from './models/controller_StockOutCreateRequest';
+export type { controller_StockOutListResponse } from './models/controller_StockOutListResponse';
+export type { controller_StockOutResponse } from './models/controller_StockOutResponse';
 export type { controller_StoreCreateRequest } from './models/controller_StoreCreateRequest';
 export type { controller_StoreListResponse } from './models/controller_StoreListResponse';
 export type { controller_StoreResponse } from './models/controller_StoreResponse';
@@ -30,5 +33,6 @@ export { ItemService } from './services/ItemService';
 export { ItemStockService } from './services/ItemStockService';
 export { JancodeService } from './services/JancodeService';
 export { StockInsService } from './services/StockInsService';
+export { StockOutsService } from './services/StockOutsService';
 export { StoreService } from './services/StoreService';
 export { UserService } from './services/UserService';
