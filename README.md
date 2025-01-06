@@ -1,38 +1,26 @@
-# sv
+# StockerSv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## 開発環境
 
-## Creating a project
+言語: TypeScript
+フレームワーク: Svelte
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 実行手順
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. インストール
 
-# create a new project in my-app
-npx sv create my-app
+```shell
+npm i
 ```
 
-## Developing
+2. 実行
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```shell
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## API生成
 
-To create a production version of your app:
-
-```bash
-npm run build
+```shell
+npx openapi-typescript-codegen --input ./swagger.json --output ./src/api
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
