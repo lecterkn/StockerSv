@@ -64,7 +64,6 @@
 		}
 		const stock = await StockInsService.postStoresStockIns(storeId, {
 			itemId: itemId,
-			place: params.place,
 			price: params.price,
 			stocks: params.stocks
 		});
